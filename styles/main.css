@@ -2,6 +2,9 @@
 :root {
 	--accent-color: #800000;  /* could also be coded #800 */
 	--gradient-color: #f6bb73;
+	--light-color: #faebd7;
+	--mid-color: #ffffff;
+	--dark-color: #181a1b;
 }
 
 /* reset */
@@ -107,6 +110,35 @@ footer {
 }
 
 /* CSS class */
+.navbar {
+	background-color: var(--accent-color);
+	& a {
+		display: block;
+		padding: 1em;
+		text-decoration: none;
+		text-align: center;
+		margin-top: 0px;
+		margin-left: 1px;
+		margin-right: 1px;
+		margin-bottom: 2px;
+		color: var(--light-color);
+	}
+	& a:hover, a:focus {
+		background-color: var(--mid-color);
+		color: var(--dark-color);
+	}
+}
+.menu {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	& li {
+		flex-basis: 20%;
+	}
+}
 .featured {
 	border-top: 2px solid var(--accent-color);
 	border-bottom: 2px solid var(--accent-color);
